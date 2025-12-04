@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Зураг таах</h1>
+
+{% if message %}
+<div class="msg">{{ message }}</div>
+{% endif %}
+
+<img src="{{ question.image }}" width="300">
+
+<p>{{ question.question }}</p>
+
+<form method="post">
+  <input name="answer" placeholder="Хариулт..." required>
+  <button>Илгээх</button>
+</form>
+{% endblock %}

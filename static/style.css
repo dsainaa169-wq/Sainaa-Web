@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  background: #0f1629;
+  color: white;
+  font-family: Poppins, sans-serif;
+}
+
+.topnav {
+  background: #1e293b;
+  padding: 12px;
+  text-align: center;
+}
+
+.topnav a {
+  color: #e2e8f0;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  padding: 18px;
+  border-radius: 12px;
+  background: #334155;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+form input, form button {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.msg {
+  margin-top: 10px;
+  padding: 10px;
+  background: #16a34a;
+  border-radius: 8px;
+}
+
+.maze .row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell.start {
+  background: #22c55e;
+}
+
+.cell.exit {
+  background: #eab308;
+}
+
+.cell.current {
+  background: #3b82f6;
+}
+
+.moves button {
+  padding: 10px;
+  margin: 5px;
+}

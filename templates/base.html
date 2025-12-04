@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mini Games</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="topnav">
+    <a href="/">Нүүр</a>
+    <a href="/guess">Санасан тоо</a>
+    <a href="/rps">Хайч · Чулуу · Даавуу</a>
+    <a href="/picture">Зураг таах</a>
+    <a href="/fibonacci">Фибоначчи</a>
+    <a href="/maze">Төөрдөг байшин</a>
+  </nav>
+
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

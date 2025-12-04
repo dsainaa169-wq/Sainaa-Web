@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Төөрдөг байшин</h1>
+
+{% if message %}
+<div class="msg">{{ message }}</div>
+{% endif %}
+
+<div class="maze">
+  {% for row in grid %}
+    <div class="row">
+      {% for cell in row %}
+        <div class="cell {{ cell }}">
+          {% if cell == 'start' %}S{% endif %}
+          {% if cell == 'exit' %}E{% endif %}
+          {% if cell == 'current' %}●{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+<form method="post" class="moves">
+  <button name="move" value="up">▲</button>
+  <button name="move" value="left">◀</button>
+  <button name="move" value="right">▶</button>
+  <button name="move" value="down">▼</button>
+  <button name="reset" value="1">🔁</button>
+</form>
+
+{% endblock %}

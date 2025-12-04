@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Санасан тоог таах</h1>
+
+<form method="post">
+  <input type="number" name="guess" placeholder="1–100" required>
+  <button>Таах</button>
+</form>
+
+{% if last_guess %}
+<p>Сүүлийн таасан: {{ last_guess }}</p>
+{% endif %}
+
+<p>Оролдлого: {{ tries }}</p>
+
+{% if message %}
+<div class="msg">{{ message }}</div>
+{% endif %}
+{% endblock %}

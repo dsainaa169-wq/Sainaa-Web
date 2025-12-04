@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Хайч · Чулуу · Даавуу</h1>
+
+<form method="post">
+  {% for c in choices %}
+    <button type="submit" name="choice" value="{{ c }}">{{ c|capitalize }}</button>
+  {% endfor %}
+</form>
+
+{% if player_choice %}
+<p>Таны сонголт: <b>{{ player_choice }}</b></p>
+<p>Компьютер: <b>{{ computer_choice }}</b></p>
+<p class="msg">{{ result }}</p>
+{% endif %}
+{% endblock %}
